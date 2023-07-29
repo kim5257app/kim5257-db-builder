@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    image: mariadb:11.0.2
+    ports:
+      - "3306:3306"
+    volumes:
+      - /home/master/nfs/kim5257_db/data:/var/lib/mysql
+    env_file:
+      - ./db.env
+    command:
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+      --event-scheduler=ON
+      --max-connections=500
+    networks:
+      - backend
+networks:
+  backend:
+    external:
+      name: kim5257_gateway_backend
