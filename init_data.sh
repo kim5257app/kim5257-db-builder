@@ -6,8 +6,8 @@ else
     exit
 fi
 
-if [ -d "/home/$USER/nfs/kim5257-db/data" ]; then
+if [ -d "/home/$USER/nfs/kim5257-db-mariadb/data" ]; then
     echo "Nginx folder already exist"
 else
-    mkdir -p /home/$USER/nfs/kim5257-db/data
+    mkdir -p /home/$USER/nfs/kim5257-db-mariadb/data
 fi
