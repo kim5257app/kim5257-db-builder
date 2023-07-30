@@ -17,5 +17,4 @@ services:
       - backend
 networks:
   backend:
-    external:
-      name: kim5257_gateway_backend
+    external: true
