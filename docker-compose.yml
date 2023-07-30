@@ -5,7 +5,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /home/master/nfs/kim5257_db/data:/var/lib/mysql
+      - /home/master/nfs/kim5257-db/data:/var/lib/mysql
     env_file:
       - ./db.env
     command:
