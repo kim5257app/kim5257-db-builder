@@ -1,11 +1,11 @@
 version: '3.8'
 services:
-  db:
+  mariadb:
     image: mariadb:11.0.2
     ports:
       - "3306:3306"
     volumes:
-      - /home/master/nfs/kim5257-db/data:/var/lib/mysql
+      - /home/master/nfs/kim5257-db-mariadb/data:/var/lib/mysql
     env_file:
       - ./db.env
     command:
