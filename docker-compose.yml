@@ -14,8 +14,10 @@ services:
       --event-scheduler=ON
       --max-connections=500
     networks:
-      - backend
+      - backbone
+      - data
 networks:
-  backend:
-    name: kim5257_gateway_backend
+  backbone:
+    name: kim5257_gateway_backbone
     external: true
+  data:
