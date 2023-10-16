@@ -13,6 +13,8 @@ services:
       --collation-server=utf8mb4_unicode_ci
       --event-scheduler=ON
       --max-connections=500
+      --slow-query-log=ON
+      --log-slow-query-time=1
     networks:
       - backbone
       - data
