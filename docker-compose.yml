@@ -13,9 +13,13 @@ services:
       --collation-server=utf8mb4_bin
       --event-scheduler=ON
       --max-connections=500
+      --slow-query-log=ON
+      --log-slow-query-time=1
     networks:
-      - backend
+      - backbone
+      - data
 networks:
-  backend:
-    name: kim5257_gateway_backend
+  backbone:
+    name: kim5257_gateway_backbone
     external: true
+  data:
