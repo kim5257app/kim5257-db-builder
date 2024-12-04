@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   mariadb:
-    image: mariadb:11.0.2
+    image: mariadb:11.6.2
     ports:
       - "3306:3306"
     volumes:
@@ -10,7 +10,7 @@ services:
       - ./db.env
     command:
       --character-set-server=utf8mb4
-      --collation-server=utf8mb4_unicode_ci
+      --collation-server=utf8mb4_bin
       --event-scheduler=ON
       --max-connections=500
     networks:
